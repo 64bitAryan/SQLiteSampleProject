@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/dataFragment">
+
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="com.ryan.sqllite.fragments.DataFragment"
+        android:label="DataFragment" >
+        <action
+            android:id="@+id/action_dataFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.ryan.sqllite.fragments.NotesFragment"
+        android:label="NotesFragment" >
+        <action
+            android:id="@+id/action_notesFragment_to_dataFragment"
+            app:destination="@id/dataFragment" />
+    </fragment>
+</navigation>
